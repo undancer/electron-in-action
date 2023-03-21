@@ -27,11 +27,17 @@ jobs:
         with:
           path: main
 
-      - name: Checkout tools repo
+      - name: Checkout electron repo
         uses: actions/checkout@v3
         with:
           repository: electron/electron
           path: electron
+
+      - name: Install electron build tools
+        run: npm i -g @electron/build-tools
+
+      - name: init
+        run: e init --root=~/electron --bootstrap testing
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
