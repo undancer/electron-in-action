@@ -27,11 +27,11 @@ jobs:
         with:
           path: main
 
-      - name: Checkout electron repo
-        uses: actions/checkout@v3
-        with:
-          repository: electron/electron
-          path: electron
+      # - name: Checkout electron repo
+      #   uses: actions/checkout@v3
+      #   with:
+      #     repository: electron/electron
+      #     path: electron
 
       - name: Install electron build tools
         run: npm i -g @electron/build-tools
